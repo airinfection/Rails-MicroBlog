@@ -1,3 +1,10 @@
+     <div class="py-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+
+         <h3>New Post</h3>
 <%= form_for :post, url: posts_path do |f| %>
   <p>
     <%= f.label :title %><br>
@@ -13,3 +20,9 @@
     <%= f.submit %>
   </p>
 <% end %>
+<%= link_to 'Back', posts_path %>
+
+       </div>
+    </div>
+  </div>
+  </div>

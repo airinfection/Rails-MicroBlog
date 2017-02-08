@@ -1,20 +1,30 @@
-<h1>Listing Posts</h1>
+    <% flash.each do |key, value| %>
+    <div class="py-1">
+    <div class="container">
+      <div class="row">
+      <div class="col-md-4"></div>
+        <div class="col-md-4">
+        <div class="alert alert-<%= key %>"><%= value %></div>      
+        </div>
+      </div>
+    </div>
+  </div>
+ <% end %>
  
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
- 
-  <% @posts.each do |post| %>
-    <tr>
-      <td><%= post.title %></td>
-      <td><%= post.text %></td>
-      <td><%= link_to 'Show', post_path(post) %></td>
-      <td><%= link_to 'Edit', edit_post_path(post) %></td>    
-      <td><%= link_to 'Delete', post_path(post), method: :delete, data: {
-      confirm: 'Are you sure to delete?'} %></td>
-</tr>
-  <% end %>
-<%= link_to 'New post', new_post_path %>
-</table>
+    <div class="py-1">
+    <div class="container">
+      <div class="row">
+       <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <% @posts.each do |post| %>
+          <h3 class=""><%= post.title.html_safe %><br></h3>
+          <p class=""><%= post.text.html_safe %></p>
+          <%= link_to 'Edit', edit_post_path(post) %>
+          <%= link_to 'Delete', post_path(post), method: :delete, data: {
+      confirm: 'Are you sure to delete?'} %>
+ <hr>
+   <% end %>
+       </div>
+    </div>
+  </div>
+  </div>

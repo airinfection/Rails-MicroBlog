@@ -1,0 +1,50 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.5.css" rel="stylesheet" type="text/css">
+
+ <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+
+<body>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <h1 class="display-1">&nbsp;my &nbsp; &nbsp;blogski</h1>
+          <hr>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+  </div>
+<%= yield %>
+<div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div class="blockquote blockquote-reverse">
+            <p class="lead">I don't know if this site actually has copyright or something else. But i don't like stolen things without any reference or permission.</p>
+            <div class="blockquote-footer">Someone famous</div>
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
